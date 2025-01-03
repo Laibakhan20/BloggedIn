@@ -5,7 +5,6 @@ import { Image } from "next-sanity/image";
 import { urlFor } from "@/sanity/lib/image";
 import { PortableText } from "next-sanity";
 import { Button } from "@/components/ui/button";
-import CommentSection from "../components/Comment";
 
 
 

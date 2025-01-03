@@ -3,9 +3,9 @@ import React, { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Comment, CommentSectionProps } from "../interface";
+import { Comment, } from "../interface";
 
-export default function CommentSection({ postId }: CommentSectionProps) {
+export default function CommentSection() {
   const [comments, setComments] = useState<Comment[]>([]);
   const [newComment, setNewComment] = useState("");
   const [authorName, setAuthorName] = useState("");

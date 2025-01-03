@@ -71,10 +71,6 @@ export interface Comment {
   text: string;
 }
 
-export interface CommentSectionProps {
- postId? : string;
-
-}
 
   
   
