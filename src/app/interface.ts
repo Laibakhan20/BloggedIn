@@ -65,6 +65,16 @@ export interface fullblog {
   author: string;
 }
 
+export interface Comment {
+  id: string;
+  author: string;
+  text: string;
+}
+
+export interface CommentSectionProps {
+ postId? : string;
+
+}
 
   
   

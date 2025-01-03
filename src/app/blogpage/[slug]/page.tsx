@@ -1,3 +1,4 @@
+import CommentSection from '@/app/components/Comment';
 import { fullblog } from '@/app/interface';
 import { client } from '@/sanity/lib/client';
 import { urlFor } from '@/sanity/lib/image';
@@ -51,6 +52,8 @@ async function Blogdetail({params}: {params:{slug:string}}) {
           Published on {new Date(data.publishedAt).toDateString()}
         </p>
       </div>
+      
+      <CommentSection/>
 
     </div>
   )
