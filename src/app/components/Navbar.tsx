@@ -12,7 +12,7 @@ const Navbar = () => {
 };
 
   return (
-    <div className='bg-myblack small:max-w-[430px] h-[60px] medium:max-w-[1535px]  large:max-w-[1728px] mx-auto text-white flex items-center relative'>
+    <div className='bg-myblack mx-auto text-white flex items-center relative'>
 
         {/*mobile navbar*/}
         <div className='container mx-auto flex items-center justify-between p-6 medium:hidden'>
@@ -39,7 +39,7 @@ const Navbar = () => {
         
         {/*tablet nav*/}
         <div className='container mx-auto  items-center p-6 medium:flex hidden pt-10'>
-        <div className='flex justify-items-start items-center text-xl font-bold font-eb tracking-wider'>Blogged<span className='text-mypurple font-bold'>In.</span></div>
+        <div className='flex justify-items-start items-center text-2xl font-bold font-eb tracking-wider'>Blogged<span className='text-mypurple font-bold'>In.</span></div>
         <div className='justify-center flex items-center mx-auto '>
             <ul className=" mx-auto flex justify-between items-center w-[200px] font-normal ">
             <Link href="/" className="hover:text-mypurple font-eb tracking-widest">home</Link>
@@ -54,3 +54,6 @@ const Navbar = () => {
 }
 
 export default Navbar
+
+
+//small:max-w-[430px] h-[60px] medium:max-w-[1535px]  large:max-w-[1728px]

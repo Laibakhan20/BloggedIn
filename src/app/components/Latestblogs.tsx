@@ -30,13 +30,13 @@ async function Latest () {
   const data: SimplifiedProduct[] = await getData();
 
   return (
-    <div className='bg-[#202020] flex justify-center items-center small:max-w-[430px] medium:max-w-[1535px] large:max-w-[1728px] mx-auto pt-10 '>
+    <div className='bg-[#202020] flex justify-center items-center small:max-w-[430px] medium:max-w-[1535px] large:max-w-[1728px] mx-auto pt-10 h-full'>
         {/**/}
      <section className="py-8 px-4 bg-[#202020]">
       <h2 className="text-2xl font-bold mb-4 text-white font-rale py-6">Our Latest Blogs</h2>
       <div className="grid grid-cols-1  medium:grid-cols-3 large:grid-cols-4 gap-7" >
         {data.map((post, idx) => (
-          <div key={idx} className=" overflow-hidden shadow-lg hover:scale-105 transition-transform" >
+          <div key={idx} className="rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform" >
             <Image
               src={urlFor(post.mainImage).url()}
               alt={post.title}
@@ -44,14 +44,15 @@ async function Latest () {
               height={300}
               className='rounded-md bg-myblack object-contain object-center'
             />
-            <div className="p-4 bg-zinc-700  w-[300px] h-[300px] text-white mt-3 px-4" >
+            <div className="p-4 bg-zinc-700  w-[300px] h-[300px] text-white mt-3 px-4 " >
+              <p className='text-lightgray text-sm pb-1'>Technology</p>
               <h3 className="text-xl font-semibold line-clamp-3 text-dark leading-tight mb-2 font-mono tracking-wide py-2">{post.title}</h3>
               <div className="prose text-gray-200 truncate line-clamp-3 font-mono font-normal">
               <PortableText value={post.body} />
               </div>
               <div className='w-full h-[0.1px] bg-black my-3 '></div>
               {/* Read More dynamic Link */}
-              <Button className="w-full py-1 bg-myblack hover:bg-mypurple text-white font-rale rounded-sm mt-6">
+              <Button className="w-full py-1 bg-myblack hover:bg-mypurple text-white font-rale rounded-sm mt-4">
               <Link href={`/blogpage/${post.slug.current}`}>Read More</Link>
             </Button>
               

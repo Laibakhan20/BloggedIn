@@ -39,7 +39,7 @@ export default async function Bloggallery() {
 
       <div className="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 bg-[#202020] pt-7" >
         {data.map((post, idx) => (
-          <div key={idx} className="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform" >
+          <div key={idx} className=" rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform" >
             
             <Image
               src={urlFor(post.mainImage).url()}
@@ -48,7 +48,8 @@ export default async function Bloggallery() {
               height={300}
               className='w-full rounded-md bg-myblack object-contain object-center'
             />
-            <div className="p-4 bg-zinc-700  w-full h-[300px] text-white mt-3 px-4" >
+            <div className="p-4 bg-zinc-700  w-full h-full text-white mt-3 px-4" >
+              <p className="text-sm font-rale text-lightgray">Technology</p>
               <h3 className="text-xl font-semibold line-clamp-3 text-dark leading-tight mb-2 font-mono tracking-wide py-2">{post.title}</h3>
              
               <div className="prose text-gray-200 truncate line-clamp-3 font-mono font-normal">
